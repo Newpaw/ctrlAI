@@ -1,0 +1,9 @@
+{
+    "api_key": "sk-xxx",
+    "api_endpoint": "https://litellm.ai-sandbox.azure.to2cz.cz/v1/chat/completions",
+    "model": "gpt-4o",
+    "launch_hotkey": "ctrl+shift+t",
+    "first_run": false,
+    "logging_level": "INFO",
+    "system_prompt": "Jsi AI agent, který napomáhá s tvorbou emailů."
+}
