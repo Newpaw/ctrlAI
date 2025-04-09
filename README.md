@@ -1,10 +1,14 @@
 # CtrlAI
 
-A Windows application designed to launch upon pressing specific key combinations (e.g., ctrl+shift+t). The application captures text inputs through commands like Ctrl+c, allowing users to edit the text before sending it to LiteLLM for processing. Once a response is received, the application displays the output, providing users with further editing capabilities and the option to copy the final text.
+A Windows application designed to launch upon pressing specific key combinations (e.g., Alt+t). The application captures text inputs through commands like Ctrl+c, allowing users to edit the text before sending it to LiteLLM for processing. Once a response is received, the application displays the output, providing users with further editing capabilities and the option to copy the final text.
+
+## Project Overview
+
+This document outlines the plan for developing a Windows application designed to launch upon pressing specific key combinations (e.g., Alt+t). The application will capture text inputs through commands like Ctrl+c, allowing users to edit the text before sending it to LiteLLM for processing. Once a response is received, the application will display the output, providing users with further editing capabilities and the option to copy the final text.
 
 ## Features
 
-- Launch with a keyboard shortcut (default: ctrl+shift+t)
+- Launch with a keyboard shortcut (default: Alt+t)
 - Capture text from clipboard
 - Edit text before sending to LiteLLM
 - View and edit LiteLLM responses
@@ -45,7 +49,7 @@ On first run, the application will create a `config.json` file with default sett
     "api_key": "",
     "api_endpoint": "https://api.litellm.ai/v1/chat/completions",
     "model": "gpt-3.5-turbo",
-    "launch_hotkey": "ctrl+shift+t",
+    "launch_hotkey": "Alt+t",
     "first_run": true
 }
 ```
@@ -71,10 +75,23 @@ On first run, the application will create a `config.json` file with default sett
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.10+
 - Windows operating system
 - Internet connection for LiteLLM API access
 - LiteLLM API key
+
+## Testing and Deployment
+
+### Testing Strategy
+
+- **Unit Testing**: Test individual components (key listener, clipboard manager, LiteLLM client)
+- **Integration Testing**: Test the interaction between components
+- **User Acceptance Testing**: Test the application with real users
+
+### Deployment Plan
+
+- **Packaging**: Use PyInstaller to package the application as a Windows executable
+- **Distribution**: Create a GitHub repository for the project
 
 ## License
 
